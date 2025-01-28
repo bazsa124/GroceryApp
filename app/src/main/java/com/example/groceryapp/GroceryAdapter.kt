@@ -51,7 +51,6 @@ class GroceryAdapter(var context:Context, var list: List<GroceryItems>, private 
         }
     }
 
-    // Inner class for ViewHolder with findViewById
     inner class GroceryViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val chBox:CheckBox=itemView.findViewById(R.id.checkBox)
         val txtItemName: TextView = itemView.findViewById(R.id.txtItemName)

@@ -35,13 +35,9 @@ class GroceryItemDialog(context: Context, var dialogListener: DialogListener, va
             etItemType.text= Editable.Factory.getInstance().newEditable(item!!.itemType)
         }
 
-        // Click listener on Save button
-        // to save all data.
         tvSave.setOnClickListener {
         var quantity:Int=1
         var iType:String="db"
-            // Take all three inputs in different variables from user
-            // and add it in Grocery Items database
             val name = etItemName.text.toString()
             if (etItemQuantity.text.toString()!="")
                 quantity = etItemQuantity.text.toString().toInt()
@@ -49,7 +45,6 @@ class GroceryItemDialog(context: Context, var dialogListener: DialogListener, va
             if (etItemType.text.toString()!="")
                 iType = etItemType.text.toString()
 
-            // Toast to display enter items in edit text
             if (name.isEmpty()) {
                 Toast.makeText(context, "Please Enter Item Name", Toast.LENGTH_SHORT).show()
             }
@@ -58,7 +53,6 @@ class GroceryItemDialog(context: Context, var dialogListener: DialogListener, va
             dismiss()
         }
 
-        // On click listener on cancel text to close dialog box
         tvCancel.setOnClickListener {
             cancel()
         }
